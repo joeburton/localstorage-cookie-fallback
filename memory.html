@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>memory.js</title>
+<script src="js/memory.js"></script>
+<script>
+  // Initialise memory and get the supported storage method
+  memory.init();
+  // if any form of client side storage is available continue
+  if(memory.storageMethod != "none"){
+    // if userName exists in the memory read the value and greet the user
+    if(memory.readValue("userName")){
+        var name = memory.readValue("userName");
+        alert("Hi, " + name + "!");
+    // if userName does not exist ask the user to input his name
+    // then store that name in the memory for future reference
+    } else {
+        var name = prompt("Please enter your name");
+        memory.storeValue("userName", name);
+    }
+  }
+</script>
+</head>
+<body>
+
+
+</body>
+</html>
