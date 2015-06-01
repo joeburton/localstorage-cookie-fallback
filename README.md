@@ -1,13 +1,13 @@
 #Local Storage and Cookie fallback
 
-Store
+**Store**
 
 memory.storeValue('PersonalDetails', JSON.stringify({'name': 'Joe Burton', 'age': 35, 'nationality': 'British'}));
 
-Read
+**Read**
 
 var joe = memory.readValue('PersonalDetails')
 
-Parse
+**Parse**
 
 JSON.parse(joe)
